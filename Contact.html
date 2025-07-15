@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contact-section {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 36px;
+  color: #c71585;
+  margin-bottom: 30px;
+}
+
+#contactForm input, #contactForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#contactForm textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  padding: 12px 20px;
+  background-color: #c71585;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #a3136c;
+}
+
+.confirmation-message {
+  background-color: #e0ffe0;
+  padding: 20px;
+  border-radius: 10px;
+  color: green;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Your Name" required>
+          <input type="email" id="email" placeholder="Your Email" required>
+          <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      
+        <!-- Confirmation Message (Hidden by default) -->
+        <div id="confirmationMessage" class="confirmation-message" style="display: none;">
+          <p>Thank you for reaching out! We'll get back to you soon.</p>
+        </div>
+      </section>
+      <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent form from submitting in the traditional way
+          
+          // Form values (could be used to send an email via an API in real apps)
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const message = document.getElementById('message').value;
+      
+          // For now, just log them (you could use this data to send to a server)
+          console.log('Form Submitted:', { name, email, message });
+      
+          // Hide the form and show a confirmation message
+          document.getElementById('contactForm').style.display = 'none'; 
+          document.getElementById('confirmationMessage').style.display = 'block';
+        });
+      </script>      
+</body>
+</html>

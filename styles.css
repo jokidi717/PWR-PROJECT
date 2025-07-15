@@ -1,0 +1,146 @@
+.hero{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://cdn.pixabay.com/photo/2018/01/24/19/49/friendship-day-3104635_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+.hero-overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+.nav-buttons .btn-outline {
+    background: transparent;
+    border: 1px solid white;
+    padding: 8px 16px;
+    color: white;
+    cursor: pointer;
+}
+.nav-buttons .btn-donate {
+    background: #e91e63;
+    padding: 8px 16px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+/* CTA Section */
+.cta-container {
+    display: flex;
+    text-align: center;
+}
+.cta-box {
+    flex: 1;
+    padding: 30px;
+    color: white;
+}
+.mission {
+    background: #e91e63;
+}
+.events {
+    background: #3f51b5;
+}
+.involved {
+    background: #673ab7;
+}
+.navbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(8, 8, 8, 0.7);
+    padding: 15px 30px;
+    color: rgb(255, 255, 255);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-links a {
+    color: rgb(70, 27, 130);
+    text-decoration: none;
+    text-align: center;
+    text-indent: center;
+}
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.nav-links li a:hover {
+    background-color: #3498db;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-buttons:hover {
+    background-color: #c2185b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.nav-links li a:hover {
+    background-color: #09090a;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-buttons {
+    background: #e91e63;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-buttons:hover {
+    background-color: #c2185b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+

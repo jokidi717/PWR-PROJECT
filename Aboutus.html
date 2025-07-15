@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .about-us {
+        padding: 60px 20px;
+        text-align: center;
+        background-color: #e1d8da;
+      }
+      
+      .about-us h2 {
+        font-size: 50px;
+        color: #d22291;
+        margin-bottom: 30px;
+      }
+      
+      .mission-statement, .vision-values, .team, .impact, .cta {
+        margin-bottom: 40px;
+      }
+      
+      h3 {
+        font-size: 28px;
+        color: #4c16ef;
+        margin-bottom: 15px;
+      }
+      
+      p {
+        font-size: 16px;
+        color: #555;
+      }
+      
+      ul {
+        text-align:center;
+        margin-top: 10px;
+        list-style-type: none;
+        padding-left: 0;
+      }
+      
+      ul li {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 8px;
+      }
+
+      .impact p {
+        font-size: 16px;
+        color: #060505;
+      }
+      .team-section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .team-section h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .team-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .team-member {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 100px;
+      max-width: 500px;
+      transition: transform 0.3s ease;
+    }
+
+    .team-member:hover {
+      transform: translateY(-10px);
+    }
+
+    .team-member img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .team-member h4 {
+      margin: 10px 0 5px;
+    }
+
+    .team-member p {
+      font-size: 14px;
+      color: #666;
+    }
+      .cta {
+        background-color: #fff0f5;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      
+      .cta h3 {
+        font-size: 24px;
+        color: #c71585;
+      }
+      
+      .cta-link {
+        color: #c71585;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      
+      .cta-link:hover {
+        text-decoration: underline;
+      }
+      body{
+        background-color: #7c5fbe;
+      }
+      </style>
+</head>
+<body>
+    <section class="about-us">
+  <h2>About Us</h2>
+
+  <!-- Mission Statement -->
+  <div class="mission-statement">
+    <h1>Our Mission</h1>
+    <p>Aim to empower girls and women worldwide by providing access to education, leadership opportunities, and support to break barriers in every field.</p>
+  </div>
+
+  <!-- Vision and Values -->
+  <div class="vision-values">
+    <h1>Our Vision & Values</h1>
+    <p>We envision a world where every woman and girl has the opportunity to pursue her dreams and live with confidence and purpose.</p>
+    <ul>
+      <li><strong>Empowerment:</strong> Encouraging women to lead and shape their future.</li>
+      <li><strong>Inclusion:</strong> Celebrating diversity and creating spaces where everyone belongs.</li>
+      <li><strong>Education:</strong> Providing access to resources that support growth and development.</li>
+    </ul>
+  </div>
+  <div class="team-container">
+    <div class="team-member">
+      <img src="https://cdn.pixabay.com/photo/2015/03/28/16/29/business-696076_1280.jpg" alt="Team Member 1">
+      <h4>John Doe</h4>
+      <p>Secretary</p>
+    </div>
+    <div class="team-member">
+      <img src="https://i.pinimg.com/736x/0b/2e/98/0b2e988dcec7af0209aa42d919c6967b.jpg" alt="Team Member 2">
+      <h4>Jane Smith</h4>
+      <p>Finance Manager</p>
+    </div>
+    <div class="team-member">
+      <img src="https://i.pinimg.com/736x/40/1d/2f/401d2f5f8f48974827a6261b13a6a1bf.jpg" alt="Team Member 3">
+      <h4>Mike Johnson</h4>
+      <p>Treasurer</p>
+    </div>
+    <div class="team-member">
+      <img src="https://i.pinimg.com/736x/cd/0a/6f/cd0a6ff185b5ff447d55fe0cb130feda.jpg" alt="Team Member 4">
+      <h4>Shalom Favour</h4>
+      <p>Program Director</p>
+    </div>
+    <div class="team-member">
+      <img src="https://i.pinimg.com/736x/4e/94/81/4e9481323f3e488c790182c530489168.jpg" alt="Team Member 5">
+      <h4>Gift Blessing</h4>
+      <p>Founder</p>
+    </div>
+    <div class="team-member">
+      <img src="https://i.pinimg.com/736x/de/d7/dc/ded7dc76a9e4ac11c1b63f51d195de1e.jpg" alt="Team Member 6">
+      <h4>Blessed Grace</h4>
+      <p>Assistant Director</p>
+    </div>
+  </div>
+  
+  <!-- Impact Section -->
+  <div class="impact">
+    <h3>Our Impact</h3>
+    <p>In the last year, we have reached over 10,000 women globally, providing them with the tools to succeed and achieve their dreams. Our mentorship programs have empowered young women to become leaders in their communities.</p>
+  </div>
+
+  <!-- Call to Action -->
+  <div class="cta">
+    <h3>Get Involved</h3>
+    <p>Join us in our mission to create a world where all women and girls are empowered to thrive. <a href="contact.html" class="cta-link">Contact us</a> to learn how you can make a difference.</p>
+  </div>
+</section>
+
+</body>
+</html>

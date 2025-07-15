@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Women's Empowerment Events</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f0ff;
+    }
+
+    .events-section {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #fff0f5;
+    }
+
+    .events-section h2 {
+      font-size: 36px;
+      color: #c71585;
+      margin-bottom: 20px;
+    }
+
+    .events-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .event-card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(199, 21, 133, 0.1);
+      width: 280px;
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .event-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .event-date {
+      color: #c7158c;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .event-title {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .event-desc {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .event-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #156ec7;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .event-btn:hover {
+      background-color: #443664;
+    }
+    .modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  text-align: left;
+  position: relative;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.modal-content button {
+  background-color: #c71585;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+  </style>
+</head>
+<body>
+
+  <section class="events-section">
+    <h2>Upcoming Events</h2>
+    <div class="events-container">
+      <div class="event-card">
+        <div class="event-date">April 15, 2025</div>
+        <div class="event-title">Girls in Tech: Coding Bootcamp</div>
+        <div class="event-desc">A one-day workshop to introduce girls to coding and web development.</div>
+        <a href="#" class="event-btn">Register</a>
+      </div>
+
+      <div class="event-card">
+        <div class="event-date">May 2, 2025</div>
+        <div class="event-title">Women Who Lead Conference</div>
+        <div class="event-desc">Empowering women in leadership roles through keynote talks and panels.</div>
+        <a href="#" class="event-btn">Learn More</a>
+      </div>
+
+      <div class="event-card">
+        <div class="event-date">June 10, 2025</div>
+        <div class="event-title">EmpowerHER Summit</div>
+        <div class="event-desc">Join us for networking, workshops, and motivation for young women.</div>
+        <a href="#" class="event-btn">Register</a>
+      </div>
+    </div>
+    <!-- Registration Modal -->
+<div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Register for Event</h3>
+      <form>
+        <input type="text" placeholder="Your Name" required><br>
+        <input type="email" placeholder="Your Email" required><br>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  
+  </section>
+  <script>
+    // Open modal
+    document.querySelectorAll('.event-btn').forEach(button => {
+      button.addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('registerModal').style.display = 'block';
+      });
+    });
+  
+    // Close modal
+    document.querySelector('.close').addEventListener('click', function() {
+      document.getElementById('registerModal').style.display = 'none';
+    });
+  
+    // Close on outside click
+    window.addEventListener('click', function(event) {
+      const modal = document.getElementById('registerModal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
+  
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <style>
+        body {
+            background-color: rgb(235, 243, 247);
+        }
+        #donationForm {
+            border: 1px solid black;
+            align-content: center;
+            border-radius: 13px;
+            text-align: center;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction:column;
+        
+        }
+
+        input {
+            border: 10px;
+            height: 50px;
+            width: 200px;
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border: 1px groove black;
+        }
+        button {
+            margin-bottom: 10px;
+            background-color: skyblue;
+            height: 50px;
+            width: 400px;
+            border-radius: 10px;
+        }
+        form label {
+           display: block;
+           margin-top: 10px;
+       }
+     #message{
+             border: radius 10px;
+             margin-bottom:10px;
+      }
+    </style>
+</head>
+
+<body> <div id="donationForm">
+    <h2>Donation Form</h2>
+    <form action="your-server-endpoint" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="amount">Donation Amount ($):</label>
+      <input type="number" id="amount" name="amount" required>
+
+      <div>
+        <label for="message">Message (Optional):</label><br>
+        <textarea id="message" name="message" rows="4" cols="40"></textarea>
+    </div>
+      <button type="submit">Submit Donation</button>
+    </form>
+  </div>
+    
+</body>
+</html>

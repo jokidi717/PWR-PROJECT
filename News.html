@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .news-section {
+        padding: 60px 20px;
+        text-align: center;
+        background-color: #fff0f5;
+      }
+      
+      .news-section h2 {
+        font-size: 36px;
+        color: #c71585;
+        margin-bottom: 30px;
+      }
+      
+      .search-bar input {
+        width: 50%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 30px;
+      }
+      
+      .news-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+      
+      .news-item {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        padding: 20px;
+        text-align: left;
+        transition: transform 0.3s ease;
+      }
+      
+      .news-item:hover {
+        transform: translateY(-10px);
+      }
+      
+      .news-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      
+      .news-item h3 {
+        font-size: 22px;
+        margin: 10px 0;
+      }
+      
+      .news-item p {
+        font-size: 14px;
+        color: #555;
+      }
+      
+      .news-item .news-date {
+        display: block;
+        font-size: 12px;
+        color: #777;
+        margin-top: 10px;
+      }
+      
+      .read-more {
+        display: inline-block;
+        margin-top: 15px;
+        color: #c71585;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      
+      .read-more:hover {
+        text-decoration: underline;
+      }
+      </style>
+</head>
+<body>
+    <section class="news-section">
+        <h2>Latest News</h2>
+        
+        <!-- Search bar for news articles -->
+        <div class="search-bar">
+          <input type="text" id="search" placeholder="Search articles..." onkeyup="searchArticles()">
+        </div>
+        
+        <!-- News articles container -->
+        <div class="news-container">
+          <div class="news-item">
+            <img src="https://i.pinimg.com/736x/2a/af/2d/2aaf2d5a4e384eb4ad25e52be39d5962.jpg" alt="Article 1">
+            <h3>Empowering Girls Through Education</h3>
+            <p>A deeper look into how education is changing the lives of girls worldwide.</p>
+            <span class="news-date">April 6, 2025</span>
+            <a href="#" class="read-more">Read More</a>
+          </div>
+          
+          <div class="news-item">
+            <img src="https://i.pinimg.com/736x/c0/18/14/c018145a32b5787008c79ad19e2e3d4f.jpg" alt="Article 2">
+            <h3>Breaking Barriers: Women in Tech</h3>
+            <p>Women in tech are breaking barriers and changing the world with innovative solutions.</p>
+            <span class="news-date">April 4, 2025</span>
+            <a href="#" class="read-more">Read More</a>
+          </div>
+          
+          <div class="news-item">
+            <img src="https://i.pinimg.com/736x/4a/98/a7/4a98a7b26f733a080c09cf7de4a274fa.jpg" alt="Article 3">
+            <h3>Leading with Confidence</h3>
+            <p>Leadership strategies that empower women to take charge in their communities.</p>
+            <span class="news-date">March 30, 2025</span>
+            <a href="#" class="read-more">Read More</a>
+          </div>
+        </div>
+      </section>
+      <script>
+        function searchArticles() {
+          const query = document.getElementById('search').value.toLowerCase();
+          const articles = document.querySelectorAll('.news-item');
+      
+          articles.forEach(article => {
+            const title = article.querySelector('h3').textContent.toLowerCase();
+            const description = article.querySelector('p').textContent.toLowerCase();
+            
+            if (title.includes(query) || description.includes(query)) {
+              article.style.display = 'block';
+            } else {
+              article.style.display = 'none';
+            }
+          });
+        }
+      </script>
+      
+</body>
+</html>
